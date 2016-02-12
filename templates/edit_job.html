@@ -7,27 +7,27 @@
     <table>
       <tr>
         <td>Title: </td>
-        <td><input type="text" name="job_title" required></td>
+        <td><input type="text" name="job_title" value="{{ job_title }}" required></td>
       </tr>
       <tr>
         <td>Job URL</td>
-        <td><input type="text" name="job_url"></td>
+        <td><input type="text" name="job_url" value="{{ job_url }}"></td>
       </tr>
       <tr>
         <td>Company Name</td>
-        <td><input type="text" name="company_name"></td>
+        <td><input type="text" name="company_name" value="{{ company_name }}"></td>
       </tr>
       <tr>
         <td>Company URL</td>
-        <td><input type="text" name="company_url"></td>
+        <td><input type="text" name="company_url" value="{{ company_url }}"></td>
       </tr>
       <tr>
         <td>Company Phone</td>
-        <td><input type="text" name="company_phone"></td>
+        <td><input type="text" name="company_phone" value="{{ company_phone }}"></td>
       </tr>
       <tr>
         <td>Company Contact</td>
-        <td><input type="text" name="company_contact"></td>
+        <td><input type="text" name="company_contact" value="{{ company_contact }}"></td>
       </tr>
       <tr>
         <td>Applied On</td>
@@ -54,7 +54,7 @@
         <td><input type="date" name="third_interview"></td>
       </tr>
       <tr>
-        <td colspan="2"><input type="submit" value="Add"></td>
+        <td colspan="2"><input type="submit" value="Save"></td>
       </tr>
     </table>
   </form>

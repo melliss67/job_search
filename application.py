@@ -60,7 +60,10 @@ def edit_job(job_id):
         #update code here
         return redirect(url_for('show_jobs'))
     else:
-        return render_template('edit_job.html', job_id=job_id)
+        job = session.query(Jobs).filter_by(job_id=job_id).one()
+        return render_template('edit_job.html', job_id=job_id, job_title=job.job_title, 
+            job_url=job.job_url, company_name=job.company_name, company_url=job.company_url,
+            company_phone=job.company_phone, company_contact=job.company_contact)
         
 if __name__ == '__main__':
     app.debug = True
