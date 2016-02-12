@@ -1,0 +1,15 @@
+jobs
+    job_id              int
+    job_title           str
+    job_url             str
+    company_name        str
+    company_url         str
+    company_phone       str
+    company_contact     str
+    applied_on          date
+    cover_page          str
+    notes               str
+    first_interview     date
+    second_interview    date
+    third_interview     date
+    

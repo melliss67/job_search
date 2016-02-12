@@ -1,0 +1,61 @@
+<!doctype html>
+<title>Edit Job</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div id="container">
+  <h1>Edit Job</h1>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td>Title: </td>
+        <td><input type="text" name="job_title" required></td>
+      </tr>
+      <tr>
+        <td>Job URL</td>
+        <td><input type="text" name="job_url"></td>
+      </tr>
+      <tr>
+        <td>Company Name</td>
+        <td><input type="text" name="company_name"></td>
+      </tr>
+      <tr>
+        <td>Company URL</td>
+        <td><input type="text" name="company_url"></td>
+      </tr>
+      <tr>
+        <td>Company Phone</td>
+        <td><input type="text" name="company_phone"></td>
+      </tr>
+      <tr>
+        <td>Company Contact</td>
+        <td><input type="text" name="company_contact"></td>
+      </tr>
+      <tr>
+        <td>Applied On</td>
+        <td><input type="date" name="applied_on"></td>
+      </tr>
+      <tr>
+        <td>Cover Page</td>
+        <td><textarea name="cover_page" col="80" rows="5"></textarea></td>
+      </tr>
+      <tr>
+        <td>Notes</td>
+        <td><textarea name="notes" col="80" rows="5"></textarea></td>
+      </tr>
+      <tr>
+        <td>First Interview</td>
+        <td><input type="date" name="first_interview"></td>
+      </tr>
+      <tr>
+        <td>Second Interview</td>
+        <td><input type="date" name="second_interview"></td>
+      </tr>
+      <tr>
+        <td>Third Interview</td>
+        <td><input type="date" name="third_interview"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Add"></td>
+      </tr>
+    </table>
+  </form>
+</div>

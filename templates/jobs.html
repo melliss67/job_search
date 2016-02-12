@@ -1,0 +1,28 @@
+{% if page > 1 %}
+    {% set prevpage = page - 1 %}
+    {% set prevlink = '<a class="nav" href="jobs?p=' ~ prevpage ~ '&pp=' ~ per_page ~ '">< Previous Page</a>' %}
+{% else %}
+    {% set prevlink = '< Previous Page' %}
+{% endif %}
+
+{% if page < ttl_pages %}
+    {% set nextpage = page + 1 %}
+    {% set nextlink = '<a class="nav" href="jobs?p=' ~ nextpage ~ '&pp=' ~ per_page ~ '">Next Page ></a>' %}
+{% else %}
+    {% set nextlink = 'Next Page >' %}
+{% endif %}
+
+<!doctype html>
+<title>Job List</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div id="container">
+  <h1>Job list</h1>
+  <ul>
+  {% for job in job_list %}
+    <li>{{job.job_title}}</li>
+  {% endfor %}
+  </ul>
+  <div id="nav-bar">
+    {{ prevlink|safe }} <span class="page_ident">{{ page }}</span> {{ nextlink|safe }}
+  </div>
+</div>

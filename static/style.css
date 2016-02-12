@@ -1,0 +1,41 @@
+body {
+    color: #000000;
+    background-color: #F0F0F0;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #F5F5F5;
+    background-color: #000000;
+    text-align: center;
+}
+
+#container {
+    max-width: 800px;
+    background-color: #FFFFFF;
+}
+
+#nav-bar {
+    
+    background-color: #E6FFFF;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.page_ident {
+    background-color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a.nav:link {
+    color: #000000;
+}
+a.nav:vistited {
+    color: #000000;
+}
+a.nav:hover {
+    color: #000000;
+    font-size: 1.1em;
+}
