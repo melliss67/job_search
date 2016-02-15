@@ -10,6 +10,43 @@ h1 {
     text-align: center;
 }
 
+td {
+    white-space: pre-wrap;
+}
+
+table.edit {
+    border: 1px solid #000000;
+}
+table.edit td {
+    border-bottom: 2px dotted #000000;
+}
+
+table.display {
+    border: 2px solid #000000;
+}
+table.display th {
+    background-color: #000099;
+    color: #FFFFFF;
+    font-style: bold;
+    font-size: 1.2em;
+}
+table.display th a  {
+    color: #FFFFFF;
+}
+table.display th a:hover  {
+    color: #FFFFCC;
+    font-size: 1.1em;
+}
+table.display td {
+    vertical-align: top;
+}
+table.display td.labels {
+    background-color: #E6E6FF;
+}
+table.display td.values {
+    background-color: #FFFFE6;
+}
+
 #container {
     max-width: 800px;
     background-color: #FFFFFF;

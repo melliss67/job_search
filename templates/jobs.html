@@ -19,7 +19,7 @@
   <h1>Job list</h1>
   <ul>
   {% for job in job_list %}
-    <li><a href="/job/edit/{{ job.job_id }}"> {{ job.job_title }}</a> {{ job.company_name }}</li>
+    <li><a href="/job/view/{{ job.job_id }}">{{ job.job_title }}</a> {{ job.company_name }} <a href="/job/edit/{{ job.job_id }}">edit</a></li>
   {% endfor %}
   </ul>
   <div id="nav-bar">

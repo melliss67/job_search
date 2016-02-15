@@ -1,0 +1,62 @@
+<!doctype html>
+<title>View Job</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div id="container">
+  <h1>View Job</h1>
+  <form action="#" method="post">
+    <table class="display">
+
+      <tr>
+        <td class="labels">Title: </td>
+        <td class="values">{{ job_title }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Job URL</td>
+        <td>{{ job_url }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Company Name</td>
+        <td class="values">{{ company_name }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Company URL</td>
+        <td>{{ company_url }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Company Phone</td>
+        <td class="values">{{ company_phone }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Company Contact</td>
+        <td>{{ company_contact }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Applied On</td>
+        <td class="values">{{ applied_on }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Cover Page Text</td>
+        <td>{{ cover_page }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Notes</td>
+        <td class="values">{{ notes }}</td>
+      </tr>
+      <tr>
+        <td class="labels">First Interview</td>
+        <td>{{ first_interview }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Second Interview</td>
+        <td class="values">{{ second_interview }}</td>
+      </tr>
+      <tr>
+        <td class="labels">Third Interview</td>
+        <td>{{ third_interview }}</td>
+      </tr>
+      <tr>
+        <th colspan="2"><a href="/jobs">return to job list</a></th>
+      </tr>
+    </table>
+  </form>
+</div>

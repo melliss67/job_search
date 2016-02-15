@@ -53,6 +53,16 @@ def new_job():
         return redirect(url_for('show_jobs'))
     else:
         return render_template('new_job.html')
+        
+@app.route('/job/view/<int:job_id>')
+def view_job(job_id):
+    job = session.query(Jobs).filter_by(job_id=job_id).one()
+    return render_template('view_job.html', job_id=job_id, job_title=job.job_title, 
+        job_url=job.job_url, company_name=job.company_name, company_url=job.company_url,
+        company_phone=job.company_phone, company_contact=job.company_contact, 
+        applied_on=job.applied_on, cover_page=job.cover_page, notes=job.notes,
+        first_interview=job.first_interview, second_interview=job.second_interview,
+        third_interview=job.third_interview)
 
 @app.route('/job/edit/<int:job_id>', methods=['GET', 'POST'])
 def edit_job(job_id):
@@ -78,6 +88,7 @@ def edit_job(job_id):
         job.company_name = request.form['company_name']
         job.company_url = request.form['company_url']
         job.company_phone = request.form['company_phone']
+        job.company_contact = request.form['company_contact']
         job.applied_on = appliedOnDate
         job.cover_page = request.form['cover_page']
         job.notes = request.form['notes']
