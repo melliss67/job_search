@@ -17,12 +17,14 @@
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 <div id="container">
   <h1>Job list</h1>
+  <a href="/job/new">add job</a>
   <ul>
   {% for job in job_list %}
     <li><a href="/job/view/{{ job.job_id }}">{{ job.job_title }}</a> {{ job.company_name }} <a href="/job/edit/{{ job.job_id }}">edit</a></li>
   {% endfor %}
   </ul>
+  <a href="/job/new">add job</a>
   <div id="nav-bar">
-    {{ prevlink|safe }} <span class="page_ident">{{ page }}</span> {{ nextlink|safe }}
+    {{ prevlink|safe }} <span class="page_ident">{{ page }} of {{ ttl_pages }}</span> {{ nextlink|safe }}
   </div>
 </div>

@@ -19,7 +19,7 @@ session = DBSession()
 
 @app.route('/')
 def home():
-    return 'Home!'
+    return redirect(url_for('show_jobs'))
     
 @app.route('/jobs')
 def show_jobs():
